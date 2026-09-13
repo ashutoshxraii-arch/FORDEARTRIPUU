@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>For Tripu — My Whole Heart ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-light"></div>
+  <div class="custom-cursor"></div>
+
+  <section class="screen hero" id="intro">
+    <div class="hero-content">
+      <span class="badge">A Curated Memory Experience</span>
+      <p class="eyebrow">30TH OF JAN · FROM ASHU</p>
+      <h1>Hey, Tripu.</h1>
+      <p class="nicknames">Jaanu · Priyotoma · My Entire World ✨</p>
+      <p class="hero-subtext">A tiny, deliberate trip through the quiet moments,<br>the loud laughter, and everything in between.</p>
+      <button class="btn-primary" id="startButton">Begin Experience <span>→</span></button>
+      
+      <div class="luxury-player">
+        <div class="player-info">
+          <div class="equalizer"><i></i><i></i><i></i><i></i></div>
+          <div class="track-details">
+            <b id="currentTrackTitle">Song 01</b>
+            <small id="playerStatus">Paused</small>
+          </div>
+        </div>
+        <div class="player-controls">
+          <button id="prevSongBtn">⏮</button>
+          <button id="playPauseBtn" class="play-btn">PLAY</button>
+          <button id="nextSongBtn">⏭</button>
+        </div>
+        <select id="playlistSelect">
+          <option value="music/song01.mp3">Song 01</option>
+          <option value="music/song02.mp3">Song 02</option>
+          <option value="music/song03.mp3">Song 03</option>
+          <option value="music/song04.mp3">Song 04</option>
+          <option value="music/song05.mp3">Song 05</option>
+          <option value="music/song06.mp3">Song 06</option>
+        </select>
+      </div>
+      <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+  </section>
+
+  <section class="story-card-section reveal" id="memoryIntro">
+    <div class="glass-card">
+      <span class="chapter-tag">CHAPTER 01</span>
+      <h2>Let's turn back time.</h2>
+      <p>Not because we live in the past, but because every single second with you deserves to be replayed in high definition.</p>
+      <button class="btn-secondary next-button" data-target="gallery">Take the Trip →</button>
+    </div>
+  </section>
+
+  <section class="gallery-section reveal" id="gallery">
+    <header>
+      <span class="chapter-tag">CURATED EXHIBIT</span>
+      <h2>The Memory Vault</h2>
+      <p>Tap any photograph to expand the memory.</p>
+    </header>
+    <div class="polaroid-grid" id="photoGrid"></div>
+    <button class="btn-primary next-button" data-target="games">Enter the Fun Zone →</button>
+  </section>
+
+  <section class="games-section reveal" id="games">
+    <header>
+      <span class="chapter-tag">INTERACTIVE CHAPTER</span>
+      <h2>The Fun Zone</h2>
+      <p>Because a birthday website should contain a little nonsense.</p>
+    </header>
+    <div class="game-grid">
+      <article class="game-card">
+        <span>🧠</span>
+        <h3>Who Said It?</h3>
+        <p>Guess who said the line.</p>
+        <p id="whoQuestion" class="question"></p>
+        <div id="whoAnswers" class="answers"></div>
+        <p id="whoFeedback" class="feedback"></p>
+      </article>
+
+      <article class="game-card">
+        <span>💻</span>
+        <h3>Ashu.exe</h3>
+        <p>Run the completely scientific diagnostic.</p>
+        <div class="terminal" id="terminalText">READY TO DIAGNOSE.</div>
+        <button class="btn-secondary" id="diagnoseBtn">Run Diagnostic</button>
+      </article>
+
+      <article class="game-card">
+        <span>🎰</span>
+        <h3>Random Memory</h3>
+        <p>Open a tiny piece of the story.</p>
+        <div class="memory-reveal" id="randomMemory">Press the button. 👀</div>
+        <button class="btn-secondary" id="memoryBtn">Give Me a Memory</button>
+      </article>
+    </div>
+
+    <div class="game-card hidden-three-card">
+      <span>🔎</span>
+      <h3>Find the Hidden 3</h3>
+      <p>Three tiny 3s are hiding around this experience.</p>
+      <b>FOUND <em id="foundCount">0</em> / 3</b>
+      <p id="hiddenHint" class="feedback">The first one is somewhere near the fun zone. 👀</p>
+    </div>
+
+    <div class="roast-card">
+      <span class="chapter-tag">CLASSIFIED</span>
+      <h3>Ashu.exe has stopped working.</h3>
+      <p id="roastText">Click the button if you dare.</p>
+      <button class="btn-primary" id="roastBtn">Roast Ashu 🔥</button>
+    </div>
+
+    <button class="btn-primary next-button" data-target="streak">Unlock a Memory →</button>
+  </section>
+
+  <section class="streak-section reveal" id="streak">
+    <div class="memory-feature">
+      <span class="chapter-tag">A LITTLE THING</span>
+      <div class="big-number">5</div>
+      <h2>Five minutes were enough.</h2>
+      <p>Chahe din kitna bhi difficult ho, agar properly milna possible nahi hota tha, phir bhi “naa” bolke rukte nahi the.</p>
+      <p class="highlight">Bas 5 minutes.</p>
+      <p>Kyuki milna kitni der ka tha, usse kahin zyada important tha tumse milna.</p>
+      <hr>
+      <p>And then there was the way you used to treat me like a little kid. 😂</p>
+      <p class="muted">Some tiny everyday moments somehow became some of the biggest memories.</p>
+    </div>
+    <button class="btn-primary next-button" data-target="letter">Continue to Letter →</button>
+  </section>
+
+  <section class="letter-section reveal" id="letter">
+    <div class="letter-container">
+      <span class="chapter-tag">FROM ASHU</span>
+      <h2>For Tripu</h2>
+      <div class="letter-body">
+        <p>Hey my love,</p>
+        <p>I didn't build this to ask for anything in return, or to make things complicated.</p>
+        <p>I simply wanted to craft a quiet, elegant space for the memories that still light up my world whenever they cross my mind.</p>
+        <p class="quote">We had some genuinely crazy, hilarious, and breathtaking moments. You will always be my softest place and my safest home.</p>
+        <p>Happy Birthday, Tripu. May your year be as beautiful and comforting as your smile.</p>
+        <p class="signature">— Ashu ❤️</p>
+      </div>
+      <button class="btn-primary" id="finalButton">Read Your Birthday Wish 🎂</button>
+    </div>
+  </section>
+
+  <section class="birthday-section reveal" id="birthday">
+    <div class="birthday-card">
+      <span class="chapter-tag">FOR MY FAVORITE PERSON</span>
+      <div class="birthday-ornament">✦ &nbsp; 𝓜𝔂 𝓔𝓷𝓽𝓲𝓻𝓮 𝓗𝓮𝓪𝓻𝓽 &nbsp; ✦</div>
+      <h2>Happy Birthday, Tripu. ❤️</h2>
+      <div class="birthday-divider">✦</div>
+      <div class="birthday-message handwritten-letter">
+        <p class="letter-greeting">Happy Birthday, my Jaanu...</p>
+        <p>Honestly, no amount of code, text, or pretty design could ever measure how much you mean to me, but today I just want to write to you straight from my heart.</p>
+        <p>I hope this year brings you infinite reasons to smile, calm and peaceful days, all the warmth in the world, and every little dream your sweet heart has ever wished for. You deserve the absolute best of everything.</p>
+        <p>When I close my eyes and think of us, my mind goes straight to all the quiet, beautiful details — the trip to Railway Museum, that chaotic bike incident, 'bulāte bulāte', our endless late-night chats, the silly way you pamper me like your own little kid, and those days when even if the whole world was against us, somehow those 5-minute meetings still happened.</p>
+        <p>Funny how those tiny 5 minutes felt like holding the entire universe in my hands.</p>
+        <p>And yes... somehow even number 3 became our own little magic code. 😂❤️</p>
+        <p>Whatever the future holds, I want you to know one thing clearly — loving you, laughing with you, and building these memories with you is the most precious gift of my life. I will forever be grateful that you exist, and that I got to share these moments with you.</p>
+        <p>Today is all about you — my favorite comfort, my favorite smile, my favorite person.</p>
+        <p>So please smile a little extra today, laugh until your stomach hurts, and let yourself feel how deeply you are loved.</p>
+        <p class="handwritten-closing">Happy Birthday, my love. Forever and always. ❤️</p>
+      </div>
+      <p class="birthday-signature handwritten-sig">— Yours, Ashu</p>
+      <button class="btn-primary next-button" data-target="cake" style="margin-top: 30px;">And now… make a wish →</button>
+    </div>
+  </section>
+
+  <section class="cake-section reveal" id="cake">
+    <div class="cake-card">
+      <span class="chapter-tag">FINAL MINI GAME</span>
+      <h2>Light the candles 🎂</h2>
+      <p>Tap every candle to finish the birthday mission.</p>
+      <div class="cake">
+        <div class="candles">
+          <button class="candle">✦</button>
+          <button class="candle">✦</button>
+          <button class="candle">✦</button>
+        </div>
+        <div class="cake-top"></div>
+        <div class="cake-body"></div>
+      </div>
+      <p id="cakeStatus">3 candles remaining.</p>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button id="closeLightbox">×</button>
+    <div>
+      <img id="lightboxImage" alt="Gallery memory view">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
