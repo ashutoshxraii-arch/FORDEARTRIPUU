@@ -229,15 +229,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Random Memory Generator
   const mem = [
-    '🚂 Railway Museum — one frame, a whole day attached to it.',
+    '🚂 Railway Museum — one frame, a quiet moment.',
     '🏍️ That bike incident that did not go according to plan.',
-    '😂 “Bulāte bulāte” — a tiny phrase that became a memory.',
+    '😂 “Bulāte bulāte” — a tiny phrase that stuck.',
     '🎵 Valam — filed under the memory soundtrack.',
-    '🤍 Every hug — no explanation required.',
-    '3 — just a number… except it isn’t.',
-    '❤️ Sonaa — one little word with its own chapter.',
-    '🫶 Being treated like a little kid — somehow funny and comforting.',
-    '⏱️ The 5-minute rule: if a full meeting was not possible, five minutes still happened.',
+    '🤍 Simple everyday conversations.',
+    '🫶 Being treated like a little kid — funny and comforting.',
+    '⏱️ The 5-minute rule: making time even on busy days.',
     '🕵️ Sneak-out chaos — one for the archives.'
   ];
   $('memoryBtn').onclick = () => $('randomMemory').textContent = mem[Math.floor(Math.random() * mem.length)];
@@ -265,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       s.remove();
       found++;
       $('foundCount').textContent = found;
-      $('hiddenHint').textContent = found < 3 ? `FOUND ${found}/3 ✦` : '🔓 Secret memory unlocked. Some numbers have a story.';
+      $('hiddenHint').textContent = found < 3 ? `FOUND ${found}/3 ✦` : '🔓 Secret unlocked!';
     };
   }
 
